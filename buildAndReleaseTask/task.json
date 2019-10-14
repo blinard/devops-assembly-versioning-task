@@ -1,0 +1,47 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "5ead15fc-2588-47bf-9526-e8e298ca581f",
+    "name": "ApplyAssemblyVersions",
+    "friendlyName": "Apply Assembly Versions",
+    "description": "Applies the ",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Brad Linard",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "searchfolder",
+            "type": "string",
+            "label": "Search Folder",
+            "defaultValue": "$(Build.Repository.LocalPath)",
+            "required": true,
+            "helpMarkDown": "Search pattern glob"
+        },
+        {
+            "name": "searchpattern",
+            "type": "string",
+            "label": "Search Pattern",
+            "defaultValue": "**/AssemblyInfo.cs",
+            "required": true,
+            "helpMarkDown": "Search pattern"
+        },
+        {
+            "name": "versionnumber",
+            "type": "string",
+            "label": "Version Number",
+            "defaultValue": "$(Build.BuildNumber)",
+            "required": true,
+            "helpMarkDown": "The version to apply to the assemblies"
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}

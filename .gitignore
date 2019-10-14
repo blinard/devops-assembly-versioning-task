@@ -1,0 +1,5 @@
+buildAndReleaseTask/node_modules
+
+**/.testingdir
+
+**/*.js
