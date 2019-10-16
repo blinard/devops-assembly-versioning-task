@@ -3,7 +3,7 @@
     "id": "5ead15fc-2588-47bf-9526-e8e298ca581f",
     "name": "ApplyAssemblyVersions",
     "friendlyName": "Apply Assembly Versions",
-    "description": "Applies the ",
+    "description": "Applies the specified version to the AssemblyInfo.cs files in your solution",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "Brad Linard",
@@ -12,7 +12,7 @@
         "Minor": 1,
         "Patch": 0
     },
-    "instanceNameFormat": "Echo $(samplestring)",
+    "instanceNameFormat": "Apply assembly version $(versionnumber)",
     "inputs": [
         {
             "name": "searchfolder",
@@ -20,7 +20,7 @@
             "label": "Search Folder",
             "defaultValue": "$(Build.Repository.LocalPath)",
             "required": true,
-            "helpMarkDown": "Search pattern glob"
+            "helpMarkDown": "Search folder"
         },
         {
             "name": "searchpattern",

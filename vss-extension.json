@@ -1,20 +1,20 @@
 {
     "manifestVersion": 1,
-    "id": "build-release-task",
-    "name": "Fabrikam Build and Release Tools",
+    "id": "apply-assembly-versions-task",
+    "name": "Apply assembly version",
     "version": "0.0.1",
-    "publisher": "fabrikam",
+    "publisher": "idelata",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Tools for building/releasing with Fabrikam. Includes one build/release task.",
+    "description": "Tool to apply the provided version to the specified files in your repo.",
     "categories": [
         "Azure Pipelines"
     ],
     "icons": {
-        "default": "images/extension-icon.png"        
+        "default": ""        
     },
     "files": [
         {
@@ -23,7 +23,7 @@
     ],
     "contributions": [
         {
-            "id": "custom-build-release-task",
+            "id": "custom-apply-assembly-versions-task",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
